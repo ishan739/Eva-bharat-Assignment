@@ -104,8 +104,8 @@ curl -X PATCH localhost:8080/tickets/<id>/status \
 
 ## Deployment
 
-- Deployed URL: TODO
-- Public health check: TODO/health
+- Deployed URL: https://eva-bharat-assignment-2umu.onrender.com
+- Public health check: https://eva-bharat-assignment-2umu.onrender.com/health
 
 ## Assumptions
 
@@ -116,3 +116,6 @@ curl -X PATCH localhost:8080/tickets/<id>/status \
 - A single SQLite connection is used (`SetMaxOpenConns(1)`) to avoid "database is locked"
   errors on concurrent writes, which is acceptable given the scope of this assignment.
 - Ticket IDs are UUIDs (v4).
+- The deployed instance runs on Render's free tier, which does not provide a persistent
+  disk. The SQLite file therefore resets on restart/redeploy/idle-sleep. This is acceptable
+  given the assignment explicitly allows in-memory storage as a valid option.
