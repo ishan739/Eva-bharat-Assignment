@@ -1,0 +1,5 @@
+*.db
+tickets.db
+.git
+.gitignore
+README.md
